@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Secrets (keep in GitHub Secrets, never commit)
+.env
+*.agekey
+age-key.txt
+
+# Raw scraper cache (uses actions/cache, not git)
+data/raw/
+
+# Decrypted traffic logs (only *.jsonl.age is committed)
+data/traffic/*.jsonl
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
