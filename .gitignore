@@ -21,3 +21,6 @@ data/traffic/*.jsonl
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local route checks
+local/
