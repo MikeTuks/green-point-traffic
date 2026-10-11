@@ -16,6 +16,13 @@ closure or control-day window from the CSVs in `data/` is active. Each
 reading is encrypted with the public age key in `data/age_recipient.txt`
 and appended to `data/traffic/YYYY-MM.jsonl.age`.
 
+GitHub's own schedule proved unreliable (4 runs in 22 h), so cron-job.org
+also triggers the workflow every 15 minutes via `workflow_dispatch`, using a
+fine-grained token (Actions: read/write on this repo only, no expiry). The
+GitHub schedule stays as a backup. The job sends `X-GitHub-Api-Version:
+2022-11-28`, which GitHub sunsets on 10 Mar 2028: update the header before
+then.
+
 Repo secrets: `TOMTOM_API`, `TOMTOM_HOME`, `TOMTOM_DEST`,
 `TOMTOM_OUT_WAYPOINTS`, `TOMTOM_RET_WAYPOINTS`.
 
