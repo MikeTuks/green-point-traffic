@@ -8,7 +8,7 @@ Runs entirely on GitHub Actions and GitHub Pages. See [PLAN.md](PLAN.md)
 for the design and build phases.
 
 ## Status
-Phase 0 (traffic logger): built, awaiting route check.
+Phase 0 (traffic logger): running. Route checked 11 Oct 2026 (outbound joins the N1 via Woodstock; kept as is).
 
 ## Phase 0: traffic logger
 `log_traffic.yml` runs every 15 minutes. It does nothing unless an event,
