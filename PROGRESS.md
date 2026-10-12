@@ -9,7 +9,7 @@ things actually stand.
 | Phase | Status |
 |---|---|
 | 0. Traffic logger | **Done, running** |
-| 6–9. Event scraper (DHL, Stormers, City, CSV loader, merge, hardening) | Not started; **next up** |
+| 6–9. Event scraper (DHL, Stormers, City, CSV loader, merge, hardening) | Recon done (12 Oct); **blocked on a decision** (see Next step) |
 | 10. Predictions + web page | Not started |
 | 11. Learning | Not started |
 | 12. Extras (issue form, ntfy alerts) | Not started |
@@ -58,14 +58,28 @@ things actually stand.
 | Sat 24 Oct | Stormers v Scarlets (16:00) | 11:00–21:00 |
 | Sat 31 Oct | Stormers v Ulster (14:45) | 09:45–19:45 |
 | Sat 7 & 14 Nov | Control days (checked: no stadium events) | 10:00–23:00 |
-| 5–6 Dec | HSBC SVNS | 03:00–23:00 each day |
+| 5–6 Dec | HSBC SVNS (10:00, end est. 20:00) | 05:00–23:00 each day |
 
 More home games through April 2027 are in `data/events_manual.csv`.
 
 ## Findings worth remembering
-- DHL Stadium's "Starts" times are unreliable, now by 1 h: Ulster shown
-  13:45 (RugbyPass 14:45), Lions 15:00 (RugbyPass 16:00). Bristol and
-  Scarlets match. CSV uses the RugbyPass times.
+- **DHL Stadium API (recon 12 Oct):** public Strapi API, no auth, no
+  robots.txt (the path returns the SPA shell), no terms page found.
+  `https://api.dhlstadium.co.za/api/events?pagination[pageSize]=100&populate[event][populate][0]=daterange`
+  → `data[].attributes.{title,category,slug}`, dates in
+  `attributes.event[].daterange[].start` (**UTC, `Z`**; `end` usually
+  null). The page's "Starts" shows the UTC clock time unconverted. Even
+  converted, DHL's data is 1 h early for Ulster, Lions, Bulls, Cardiff
+  (vs Stormers), and lacks Zebre. SVNS: 10:00 SAST both days.
+- **Stormers site (recon 12 Oct):** `/wp-json/` needs a login (401).
+  `/match-centre/` embeds schema.org `SportsEvent` JSON-LD with local
+  `startDate` and venue, plus a match JSON blob (`dateTime` UTC, `tbc`,
+  `venue`). robots.txt allows it. **But their terms forbid any "robot,
+  spider ... or manual process to monitor, copy" the site without written
+  consent, and reuse on another website.**
+- CSV corrected from Stormers times on 12 Oct: Bulls 15:00→16:00,
+  Cardiff 16:00→17:00, added Zebre Parma 30 Jan 17:00, SVNS start
+  08:00→10:00 (DHL).
 - The Sharks home game on 10 Oct was missed (logger not yet live).
 - November has no home club rugby (international window).
 
@@ -75,18 +89,15 @@ More home games through April 2027 are in `data/events_manual.csv`.
 - [ ] Before 10 Mar 2028: change the cron-job.org header
       `X-GitHub-Api-Version: 2022-11-28` (GitHub sunsets it then).
 - [x] All-day events: optional `end_time` column added to
-      `events_manual.csv` (12 Oct). SVNS set to 08:00–20:00 per day.
-- [ ] Before 5 Dec: confirm SVNS 2026 daily start/end times (20:00 is an
-      estimate; no official schedule found on 12 Oct).
+      `events_manual.csv` (12 Oct). SVNS set to 10:00–20:00 per day.
+- [ ] Before 5 Dec: confirm SVNS 2026 daily end time (20:00 is an
+      estimate; DHL API gives 10:00 start, no end).
 - [ ] Optional: delete the unused "Traffic" environment in repo settings.
 
 ## Next step
-Phase 6 recon (read-only):
-1. Read robots.txt and terms for dhlstadium.co.za and stormers.co.za.
-2. Find the JSON feed behind dhlstadium.co.za/events (DevTools → Network
-   → Fetch/XHR); check whether its times are UTC (would explain the
-   shifted "Starts" field).
-3. Check the Stormers site for `/wp-json/` fixture data.
+Decide how to get Stormers kick-off times given their terms (ask
+Stormers for consent, or DHL API + manual CSV times), then build
+`scrapers/base.py` and `dhl_stadium.py` (Phase 6–7a).
 
 ## Resuming in a new session
     cd "Side Projects/green-point-traffic"
