@@ -70,8 +70,7 @@ More home games through April 2027 are in `data/events_manual.csv`.
 - November has no home club rugby (international window).
 
 ## Open to-dos
-- [ ] **Back up `age-key.txt`** off the laptop (password manager or USB).
-      Without it the log can never be decrypted.
+- [x] Back up `age-key.txt` off the laptop (done 12 Oct).
 - [ ] Check readings after Sat 17 Oct (`decrypt_log.py`).
 - [ ] Before 10 Mar 2028: change the cron-job.org header
       `X-GitHub-Api-Version: 2022-11-28` (GitHub sunsets it then).
