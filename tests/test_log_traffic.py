@@ -38,6 +38,13 @@ def test_multi_day_event_gets_one_window_per_day():
     assert {x["event_id"] for x in w} == {"2026-12-05-hsbc-svns-cape-town"}
 
 
+def test_end_time_overrides_default_duration():
+    w = lt.event_windows([{"name": "HSBC SVNS Cape Town", "date": "2026-12-05", "end_date": "2026-12-06",
+                           "time": "10:00", "end_time": "20:00", "category": "sport"}])
+    assert w[1]["end"] == sast(2026, 12, 6, 20)
+    assert (w[1]["from"], w[1]["to"]) == (sast(2026, 12, 6, 5), sast(2026, 12, 6, 23))
+
+
 def test_closure_window_spans_multiple_days():
     w = lt.closure_windows([{"event_date": "2027-03-14", "event_name": "Cape Town Cycle Tour",
                              "road": "Fritz Sonnenberg Rd", "from": "2027-03-11T06:00", "to": "2027-03-14T21:00"}])

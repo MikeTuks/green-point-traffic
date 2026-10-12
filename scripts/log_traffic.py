@@ -49,7 +49,10 @@ def at(day, t):
 
 
 def event_windows(rows):
-    """One window per event day: start - 5 h to end + 3 h (10:00-23:00 if time TBC)."""
+    """One window per event day: start - 5 h to end + 3 h (10:00-23:00 if time TBC).
+
+    End is end_time if given, else start + the category's default duration.
+    """
     windows = []
     for row in rows:
         first = date.fromisoformat(row["date"])
@@ -58,13 +61,15 @@ def event_windows(rows):
         event_id = f"{first.isoformat()}-{slug(row['name'])}"
         day = first
         while day <= last:
-            if row.get("time"):
-                start = at(day, time.fromisoformat(row["time"]))
+            start = at(day, time.fromisoformat(row["time"]) if row.get("time")
+                       else DEFAULT_TIME.get(category, time(16, 0)))
+            if row.get("end_time"):
+                end = at(day, time.fromisoformat(row["end_time"]))
+            else:
                 end = start + DURATION.get(category, timedelta(hours=3))
+            if row.get("time"):
                 win = (start - BEFORE, end + AFTER)
             else:
-                start = at(day, DEFAULT_TIME.get(category, time(16, 0)))
-                end = start + DURATION.get(category, timedelta(hours=3))
                 win = (at(day, TBC_WINDOW[0]), at(day, TBC_WINDOW[1]))
             windows.append({"kind": "event", "event_id": event_id, "from": win[0], "to": win[1],
                             "start": start, "end": end})

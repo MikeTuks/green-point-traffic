@@ -101,9 +101,12 @@ month, each billed as at least 1 minute, against 2,000 free minutes.
 ### 4. Manual CSVs
 `data/events_manual.csv`:
 
-    name,date,end_date,time,category,size,crowd
-    HSBC SVNS Cape Town,2026-12-05,2026-12-06,08:00,sport,big,
-    Cape Town Marathon,2027-05-22,2027-05-23,06:00,race,big,44500
+    name,date,end_date,time,end_time,category,size,crowd
+    HSBC SVNS Cape Town,2026-12-05,2026-12-06,08:00,20:00,sport,big,
+    Cape Town Marathon,2027-05-22,2027-05-23,06:00,,race,big,44500
+
+`end_time` is optional (per day for multi-day rows); blank means start +
+the category's default duration.
 
 `data/closures_manual.csv` (one row per road closure, from organiser
 PDFs or City releases):

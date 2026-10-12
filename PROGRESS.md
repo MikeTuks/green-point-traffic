@@ -58,7 +58,7 @@ things actually stand.
 | Sat 24 Oct | Stormers v Scarlets (16:00) | 11:00–21:00 |
 | Sat 31 Oct | Stormers v Ulster (14:45) | 09:45–19:45 |
 | Sat 7 & 14 Nov | Control days (checked: no stadium events) | 10:00–23:00 |
-| 5–6 Dec | HSBC SVNS | 03:00–13:00 each day |
+| 5–6 Dec | HSBC SVNS | 03:00–23:00 each day |
 
 More home games through April 2027 are in `data/events_manual.csv`.
 
@@ -74,9 +74,10 @@ More home games through April 2027 are in `data/events_manual.csv`.
 - [ ] Check readings after Sat 17 Oct (`decrypt_log.py`).
 - [ ] Before 10 Mar 2028: change the cron-job.org header
       `X-GitHub-Api-Version: 2022-11-28` (GitHub sunsets it then).
-- [ ] Before 5 Dec: SVNS runs all day, but the logger assumes a 2 h sport
-      event, so its window ends at 13:00. Add an optional duration column
-      to `events_manual.csv` (or similar) so all-day events are covered.
+- [x] All-day events: optional `end_time` column added to
+      `events_manual.csv` (12 Oct). SVNS set to 08:00–20:00 per day.
+- [ ] Before 5 Dec: confirm SVNS 2026 daily start/end times (20:00 is an
+      estimate; no official schedule found on 12 Oct).
 - [ ] Optional: delete the unused "Traffic" environment in repo settings.
 
 ## Next step
