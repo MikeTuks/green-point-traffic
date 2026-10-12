@@ -1,0 +1,1879 @@
+[
+ {
+  "id": "2024-09-07-springboks-vs-all-blacks",
+  "name": "Springboks vs All Blacks",
+  "start": "2024-09-07T17:00:00+02:00",
+  "end_estimate": "2024-09-07T19:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-422"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2024-12-18-stellenbosch-fc-vs-mamelodi-sundowns-fc",
+  "name": "Stellenbosch FC vs Mamelodi Sundowns FC",
+  "start": "2024-12-18T19:30:00+02:00",
+  "end_estimate": "2024-12-18T21:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-420"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2024-12-21-dhl-stormers-vs-emirates-lions",
+  "name": "DHL Stormers vs Emirates Lions",
+  "start": "2024-12-21T15:45:00+02:00",
+  "end_estimate": "2024-12-21T17:45:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-415"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2024-12-28-dhl-stormers-vs-hollywoodbets-sharks",
+  "name": "DHL Stormers vs Hollywoodbets Sharks",
+  "start": "2024-12-28T17:00:00+02:00",
+  "end_estimate": "2024-12-28T19:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-418"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2024-12-29-cape-town-city-fc-vs-amazulu-fc",
+  "name": "Cape Town City FC vs AmaZulu FC",
+  "start": "2024-12-29T15:30:00+02:00",
+  "end_estimate": "2024-12-29T17:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-416"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-01-05-cape-town-city-fc-vs-kaizer-chiefs",
+  "name": "Cape Town City FC vs Kaizer Chiefs",
+  "start": "2025-01-05T17:45:00+02:00",
+  "end_estimate": "2025-01-05T19:45:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-417"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-01-08-cape-town-city-fc-vs-orlando-pirates",
+  "name": "Cape Town City FC vs Orlando Pirates",
+  "start": "2025-01-08T19:30:00+02:00",
+  "end_estimate": "2025-01-08T21:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-410"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-01-11-dhl-stormers-vs-sale-sharks",
+  "name": "DHL Stormers vs Sale Sharks",
+  "start": "2025-01-11T15:00:00+02:00",
+  "end_estimate": "2025-01-11T17:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-411"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-01-22-calabash-2025",
+  "name": "Calabash 2025",
+  "start": "2025-01-22T18:00:00+02:00",
+  "end_estimate": "2025-01-23T23:30:00+02:00",
+  "end_date": "2025-01-23",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "concert",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-425"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-02-01-passion-south-africa",
+  "name": "Passion South Africa",
+  "start": "2025-02-01T19:30:00+02:00",
+  "end_estimate": "2025-02-01T22:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-413"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-02-08-dhl-stormers-vs-vodacom-bulls",
+  "name": "DHL Stormers vs Vodacom Bulls",
+  "start": "2025-02-08T14:00:00+02:00",
+  "end_estimate": "2025-02-08T16:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-412"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-02-22-lighthouse-x-ctemf",
+  "name": "Lighthouse x CTEMF",
+  "start": "2025-02-22T14:00:00+02:00",
+  "end_estimate": "2025-02-22T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "concert",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-419"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-03-06-cape-town-cycle-tour-expo",
+  "name": "Cape Town Cycle Tour Expo",
+  "start": "2025-03-06T09:30:00+02:00",
+  "end_estimate": "2025-03-08T16:00:19.056000+02:00",
+  "end_date": "2025-03-08",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-424"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-03-22-folks-open-air-music-festival",
+  "name": "Folks Open Air Music Festival",
+  "start": "2025-03-22T14:00:00+02:00",
+  "end_estimate": "2025-03-23T00:00:24.430000+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "concert",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-403"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-03-28-sa-intl-tattoo-convention",
+  "name": "SA Intl. Tattoo Convention",
+  "start": "2025-03-28T17:00:00+02:00",
+  "end_estimate": "2025-03-30T21:00:50.949000+02:00",
+  "end_date": "2025-03-30",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-426"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-03-30-spar-women-s-challenge",
+  "name": "Spar Women's Challenge",
+  "start": "2025-03-30T07:00:00+02:00",
+  "end_estimate": "2025-03-30T11:30:42.897000+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-427"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-04-02-two-oceans-marathon-expo",
+  "name": "Two Oceans Marathon Expo",
+  "start": "2025-04-02T10:00:00+02:00",
+  "end_estimate": "2025-04-05T15:00:33.100000+02:00",
+  "end_date": "2025-04-05",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-430"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-04-02-stellenbosch-fc-vs-zamalek-sc",
+  "name": "Stellenbosch FC vs Zamalek SC",
+  "start": "2025-04-02T15:00:00+02:00",
+  "end_estimate": "2025-04-02T17:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-423"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-04-06-cape-town-city-fc-vs-sekhukhune",
+  "name": "Cape Town City FC. vs Sekhukhune",
+  "start": "2025-04-06T17:30:00+02:00",
+  "end_estimate": "2025-04-06T19:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-393"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-04-16-andrea-bocelli-live",
+  "name": "Andrea Bocelli LIVE",
+  "start": "2025-04-16T20:00:00+02:00",
+  "end_estimate": "2025-04-17T00:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "concert",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-396"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-04-19-dhl-stormers-vs-connacht-rugby",
+  "name": "DHL Stormers vs Connacht Rugby",
+  "start": "2025-04-19T16:00:00+02:00",
+  "end_estimate": "2025-04-19T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-409"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-05-03-cape-town-city-fc-vs-mamelodi-sundowns",
+  "name": "Cape Town City FC. vs Mamelodi Sundowns",
+  "start": "2025-05-03T20:00:00+02:00",
+  "end_estimate": "2025-05-03T22:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-408"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-05-06-we-are-africa",
+  "name": "We Are Africa",
+  "start": "2025-05-06T09:00:00+02:00",
+  "end_estimate": "2025-05-09T12:00:00+02:00",
+  "end_date": "2025-05-09",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-389"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-05-10-dhl-stormers-vs-dragons-rfc",
+  "name": "DHL Stormers vs Dragons RFC",
+  "start": "2025-05-10T18:15:00+02:00",
+  "end_estimate": "2025-05-10T20:15:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-433"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-05-16-dhl-stormers-vs-cardiff-rugby",
+  "name": "DHL Stormers vs Cardiff Rugby",
+  "start": "2025-05-16T19:00:00+02:00",
+  "end_estimate": "2025-05-16T21:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-429"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-05-24-cape-town-city-fc-vs-stellenbosch-fc",
+  "name": "Cape Town City FC. vs Stellenbosch FC.",
+  "start": "2025-05-24T15:00:00+02:00",
+  "end_estimate": "2025-05-24T17:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-431"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-06-28-springboks-vs-barbarians",
+  "name": "Springboks vs Barbarians",
+  "start": "2025-06-28T17:10:00+02:00",
+  "end_estimate": "2025-06-28T19:10:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-434"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-07-18-ladles-of-love-mandela-day-2025",
+  "name": "Ladles Of Love Mandela Day 2025",
+  "start": "2025-07-18T09:00:00+02:00",
+  "end_estimate": "2025-07-18T17:00:28.749000+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-421"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-07-26-dhl-western-province-vs-vodacom-bulls",
+  "name": "DHL Western Province vs Vodacom Bulls",
+  "start": "2025-07-26T17:10:00+02:00",
+  "end_estimate": "2025-07-26T19:10:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-435"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-07-30-caroline-s-red-wine-review",
+  "name": "Caroline's Red Wine Review",
+  "start": "2025-07-30T17:00:00+02:00",
+  "end_estimate": "2025-07-30T20:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-436"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-08-03-stellenbosch-fc-vs-amazulu-fc",
+  "name": "Stellenbosch FC vs Amazulu FC",
+  "start": "2025-08-03T15:00:00+02:00",
+  "end_estimate": "2025-08-03T17:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-443"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-08-23-springboks-vs-wallabies",
+  "name": "Springboks vs Wallabies",
+  "start": "2025-08-23T17:10:00+02:00",
+  "end_estimate": "2025-08-23T19:10:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-438"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-08-30-dhl-western-province-vs-airlink-pumas",
+  "name": "DHL Western Province vs Airlink Pumas",
+  "start": "2025-08-30T19:20:00+02:00",
+  "end_estimate": "2025-08-30T21:20:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-428"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-09-06-dhl-western-province-vs-boland-cavaliers",
+  "name": "DHL Western Province vs Boland Cavaliers",
+  "start": "2025-09-06T14:45:00+02:00",
+  "end_estimate": "2025-09-06T16:45:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-432"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-09-20-afrikaans-is-100-jaar-groot",
+  "name": "Afrikaans is 100 Jaar Groot",
+  "start": "2025-09-20T19:00:00+02:00",
+  "end_estimate": "2025-09-20T23:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "concert",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-441"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-09-26-dhl-stormers-vs-leinster",
+  "name": "DHL Stormers vs Leinster",
+  "start": "2025-09-26T19:00:00+02:00",
+  "end_estimate": "2025-09-26T21:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-440"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-10-03-dhl-stormers-vs-ospreys",
+  "name": "DHL Stormers vs Ospreys",
+  "start": "2025-10-03T19:00:00+02:00",
+  "end_estimate": "2025-10-03T21:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-439"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-10-16-sanlam-cape-town-marathon-expo",
+  "name": "Sanlam Cape Town Marathon Expo",
+  "start": "2025-10-16T09:00:00+02:00",
+  "end_estimate": "2025-10-18T17:00:09.788000+02:00",
+  "end_date": "2025-10-18",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-442"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-10-21-playbook-education-school-sports-summit",
+  "name": "Playbook Education School Sports Summit",
+  "start": "2025-10-21T08:00:00+02:00",
+  "end_estimate": "2025-10-22T14:30:34.406000+02:00",
+  "end_date": "2025-10-22",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "unknown",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-456"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-11-04-creative-sports-economy-futures-2025",
+  "name": "Creative & Sports Economy Futures 2025",
+  "start": "2025-11-04T07:00:00+02:00",
+  "end_estimate": "2025-11-05T17:30:00+02:00",
+  "end_date": "2025-11-05",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-454"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-12-13-world-supercross-championship",
+  "name": "World Supercross Championship",
+  "start": "2025-12-13T19:10:00+02:00",
+  "end_estimate": "2025-12-13T21:10:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-398"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2025-12-20-dhl-stormers-vs-emirates-lions",
+  "name": "DHL Stormers vs Emirates Lions",
+  "start": "2025-12-20T15:30:00+02:00",
+  "end_estimate": "2025-12-20T17:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-388"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-01-03-dhl-stormers-vs-vodacom-bulls",
+  "name": "DHL Stormers vs Vodacom Bulls",
+  "start": "2026-01-03T18:00:00+02:00",
+  "end_estimate": "2026-01-03T20:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-387"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-01-17-dhl-stormers-vs-leicester-tigers",
+  "name": "DHL Stormers vs Leicester Tigers",
+  "start": "2026-01-17T17:15:00+02:00",
+  "end_estimate": "2026-01-17T19:15:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-444"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-01-24-dhl-stormers-vs-hollywoodbets-sharks",
+  "name": "DHL Stormers vs Hollywoodbets Sharks",
+  "start": "2026-01-24T19:30:00+02:00",
+  "end_estimate": "2026-01-24T21:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-386"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-01-30-dhl-stormers-vs-zebre-parma",
+  "name": "DHL Stormers vs Zebre Parma",
+  "start": "2026-01-30T16:00:00+02:00",
+  "end_estimate": "2026-01-30T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-477"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-02-01-stellenbosch-fc-vs-cr-belouizdad",
+  "name": "Stellenbosch FC vs CR Belouizdad",
+  "start": "2026-02-01T15:00:00+02:00",
+  "end_estimate": "2026-02-01T17:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-458"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-02-04-stellenbosch-fc-vs-kaizer-chiefs",
+  "name": "Stellenbosch FC vs Kaizer Chiefs",
+  "start": "2026-02-04T19:00:00+02:00",
+  "end_estimate": "2026-02-04T21:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-460"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-02-07-dtbs-flashes",
+  "name": "DTBS Flashes",
+  "start": "2026-02-07T06:00:00+02:00",
+  "end_estimate": "2026-02-07T08:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-459"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-02-15-stellenbosch-fc-vs-singida-black-stars",
+  "name": "Stellenbosch FC vs Singida Black Stars",
+  "start": "2026-02-15T18:00:00+02:00",
+  "end_estimate": "2026-02-15T20:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-449"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-03-05-cape-town-cycle-tour-expo",
+  "name": "Cape Town Cycle Tour Expo",
+  "start": "2026-03-05T09:30:00+02:00",
+  "end_estimate": "2026-03-07T16:00:07.648000+02:00",
+  "end_date": "2026-03-07",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-450"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-03-13-sa-international-tattoo-convention",
+  "name": "SA International Tattoo Convention",
+  "start": "2026-03-13T17:00:00+02:00",
+  "end_estimate": "2026-03-15T21:00:03.332000+02:00",
+  "end_date": "2026-03-15",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-461"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-03-22-dhl-stormers-vs-dragons",
+  "name": "DHL Stormers vs Dragons",
+  "start": "2026-03-22T15:00:00+02:00",
+  "end_estimate": "2026-03-22T17:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-445"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-03-28-dhl-stormers-vs-edinburgh",
+  "name": "DHL Stormers vs Edinburgh",
+  "start": "2026-03-28T19:00:00+02:00",
+  "end_estimate": "2026-03-28T21:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-402"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-03-31-south-africa-vs-panama",
+  "name": "South Africa vs Panama",
+  "start": "2026-03-31T19:30:00+02:00",
+  "end_estimate": "2026-03-31T21:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-451"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-04-18-dhl-stormers-vs-connacht-rugby",
+  "name": "DHL Stormers vs Connacht Rugby",
+  "start": "2026-04-18T13:45:00+02:00",
+  "end_estimate": "2026-04-18T15:45:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-447"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-04-25-dhl-stormers-vs-glasgow-warriors",
+  "name": "DHL Stormers vs Glasgow Warriors",
+  "start": "2026-04-25T13:45:00+02:00",
+  "end_estimate": "2026-04-25T15:45:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-446"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-05-05-we-are-africa",
+  "name": "We Are Africa",
+  "start": "2026-05-05T09:00:00+02:00",
+  "end_estimate": "2026-05-08T18:00:58.771000+02:00",
+  "end_date": "2026-05-08",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-455"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-05-21-sanlam-cape-town-marathon-expo",
+  "name": "Sanlam Cape Town Marathon Expo",
+  "start": "2026-05-21T09:00:00+02:00",
+  "end_estimate": "2026-05-23T17:00:32.298000+02:00",
+  "end_date": "2026-05-23",
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-392"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-07-17-ladles-of-love-mandela-day",
+  "name": "Ladles of Love Mandela Day",
+  "start": "2026-07-17T09:00:00+02:00",
+  "end_estimate": "2026-07-17T17:00:15.989000+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-465"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-07-17-dhl-stormers-xxiii-vs-suzuki-griquas",
+  "name": "DHL Stormers XXIII vs Suzuki Griquas",
+  "start": "2026-07-17T19:05:00+02:00",
+  "end_estimate": "2026-07-17T21:05:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-466"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-08-01-dhl-stormers-xxiii-vs-sharks",
+  "name": "DHL Stormers XXIII vs Sharks",
+  "start": "2026-08-01T15:00:00+02:00",
+  "end_estimate": "2026-08-01T17:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-467"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-08-07-dhl-stormers-vs-all-blacks",
+  "name": "DHL Stormers vs All Blacks",
+  "start": "2026-08-07T19:00:00+02:00",
+  "end_estimate": "2026-08-07T21:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-462"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-08-29-springboks-vs-all-blacks",
+  "name": "Springboks vs All Blacks",
+  "start": "2026-08-29T17:10:00+02:00",
+  "end_estimate": "2026-08-29T19:10:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-452"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-09-12-outsurance-gun-run",
+  "name": "OUTsurance Gun Run",
+  "start": "2026-09-12T16:00:00+02:00",
+  "end_estimate": "2026-09-12T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": false,
+  "time_source": "default",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-481"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-10-10-dhl-stormers-vs-hollywoodbets-sharks",
+  "name": "DHL Stormers vs Hollywoodbets Sharks",
+  "start": "2026-10-10T16:00:00+02:00",
+  "end_estimate": "2026-10-10T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-469"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
+  "id": "2026-10-17-stormers-vs-bristol-bears",
+  "name": "Stormers vs Bristol Bears",
+  "start": "2026-10-17T16:15:00+02:00",
+  "end_estimate": "2026-10-17T18:15:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2026-10-17-stormers-vs-bristol-bears",
+   "dhl_stadium": "event-470",
+   "sportsdb": "2550793"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2026-10-24-stormers-vs-scarlets",
+  "name": "Stormers vs Scarlets",
+  "start": "2026-10-24T16:00:00+02:00",
+  "end_estimate": "2026-10-24T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2026-10-24-stormers-vs-scarlets",
+   "dhl_stadium": "event-471",
+   "sportsdb": "2550123"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2026-10-31-stormers-vs-ulster",
+  "name": "Stormers vs Ulster",
+  "start": "2026-10-31T14:45:00+02:00",
+  "end_estimate": "2026-10-31T16:45:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2026-10-31-stormers-vs-ulster",
+   "dhl_stadium": "event-472",
+   "sportsdb": "2550128"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2026-12-05-hsbc-svns-cape-town",
+  "name": "HSBC SVNS Cape Town",
+  "start": "2026-12-05T10:00:00+02:00",
+  "end_estimate": "2026-12-06T20:00:00+02:00",
+  "end_date": "2026-12-06",
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "csv": "2026-12-05-hsbc-svns-cape-town",
+   "dhl_stadium": "event-457"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2026-12-19-stormers-vs-lions",
+  "name": "Stormers vs Lions",
+  "start": "2026-12-19T16:00:00+02:00",
+  "end_estimate": "2026-12-19T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2026-12-19-stormers-vs-lions",
+   "dhl_stadium": "event-473",
+   "sportsdb": "2550145"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-01-02-cape-town-street-parade",
+  "name": "Cape Town Street Parade",
+  "start": "2027-01-02T06:00:00+02:00",
+  "end_estimate": "2027-01-02T21:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "parade",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv"
+  ],
+  "source_ids": {
+   "csv": "2027-01-02-cape-town-street-parade"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-01-03-stormers-vs-bulls",
+  "name": "Stormers vs Bulls",
+  "start": "2027-01-03T16:00:00+02:00",
+  "end_estimate": "2027-01-03T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "big",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2027-01-03-stormers-vs-bulls",
+   "dhl_stadium": "event-474",
+   "sportsdb": "2550163"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-01-16-stormers-vs-racing-92",
+  "name": "Stormers vs Racing 92",
+  "start": "2027-01-16T17:15:00+02:00",
+  "end_estimate": "2027-01-16T19:15:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2027-01-16-stormers-vs-racing-92",
+   "dhl_stadium": "event-475",
+   "sportsdb": "2550830"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-01-23-stormers-vs-cardiff-rugby",
+  "name": "Stormers vs Cardiff Rugby",
+  "start": "2027-01-23T17:00:00+02:00",
+  "end_estimate": "2027-01-23T19:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2027-01-23-stormers-vs-cardiff-rugby",
+   "dhl_stadium": "event-464",
+   "sportsdb": "2550168"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-01-30-stormers-vs-zebre-parma",
+  "name": "Stormers vs Zebre Parma",
+  "start": "2027-01-30T17:00:00+02:00",
+  "end_estimate": "2027-01-30T19:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv"
+  ],
+  "source_ids": {
+   "csv": "2027-01-30-stormers-vs-zebre-parma"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-02-27-cape-town-pride-mardi-gras",
+  "name": "Cape Town Pride Mardi Gras",
+  "start": "2027-02-27T11:00:00+02:00",
+  "end_estimate": "2027-02-28T21:00:00+02:00",
+  "end_date": "2027-02-28",
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "parade",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv"
+  ],
+  "source_ids": {
+   "csv": "2027-02-27-cape-town-pride-mardi-gras"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-03-11-cape-town-cycle-tour-expo",
+  "name": "Cape Town Cycle Tour Expo",
+  "start": "2027-03-11T10:00:00+02:00",
+  "end_estimate": "2027-03-13T20:00:00+02:00",
+  "end_date": "2027-03-13",
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "other",
+  "size": "big",
+  "crowd_hint": 35000,
+  "closures": [],
+  "sources": [
+   "csv"
+  ],
+  "source_ids": {
+   "csv": "2027-03-11-cape-town-cycle-tour-expo"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-03-14-cape-town-cycle-tour",
+  "name": "Cape Town Cycle Tour",
+  "start": "2027-03-14T06:00:00+02:00",
+  "end_estimate": "2027-03-14T18:30:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "race",
+  "size": "big",
+  "crowd_hint": 30000,
+  "closures": [
+   {
+    "road": "Fritz Sonnenberg Rd",
+    "from": "2027-03-11T06:00:00+02:00",
+    "to": "2027-03-14T21:00:00+02:00",
+    "source_url": "estimate (2026 pattern)"
+   },
+   {
+    "road": "Beach Rd",
+    "from": "2027-03-14T05:00:00+02:00",
+    "to": "2027-03-14T18:30:00+02:00",
+    "source_url": "estimate (2026 pattern)"
+   }
+  ],
+  "sources": [
+   "csv"
+  ],
+  "source_ids": {
+   "csv": "2027-03-14-cape-town-cycle-tour"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-04-17-stormers-vs-benetton-rugby",
+  "name": "Stormers vs Benetton Rugby",
+  "start": "2027-04-17T16:00:00+02:00",
+  "end_estimate": "2027-04-17T18:00:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2027-04-17-stormers-vs-benetton-rugby",
+   "dhl_stadium": "event-414",
+   "sportsdb": "2550209"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-04-24-stormers-vs-munster",
+  "name": "Stormers vs Munster",
+  "start": "2027-04-24T18:05:00+02:00",
+  "end_estimate": "2027-04-24T20:05:00+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "sport",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "csv",
+   "dhl_stadium",
+   "sportsdb"
+  ],
+  "source_ids": {
+   "csv": "2027-04-24-stormers-vs-munster",
+   "dhl_stadium": "event-476",
+   "sportsdb": "2550219"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-05-22-cape-town-marathon",
+  "name": "Cape Town Marathon",
+  "start": "2027-05-22T06:00:00+02:00",
+  "end_estimate": "2027-05-23T13:00:00+02:00",
+  "end_date": "2027-05-23",
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "race",
+  "size": "big",
+  "crowd_hint": 44500,
+  "closures": [],
+  "sources": [
+   "csv"
+  ],
+  "source_ids": {
+   "csv": "2027-05-22-cape-town-marathon"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ },
+ {
+  "id": "2027-09-11-gun-run",
+  "name": "Gun Run",
+  "start": "2027-09-11T06:00:00+02:00",
+  "end_estimate": "2027-09-12T12:00:00+02:00",
+  "end_date": "2027-09-12",
+  "time_confirmed": true,
+  "time_source": "csv",
+  "category": "race",
+  "size": "big",
+  "crowd_hint": 21000,
+  "closures": [],
+  "sources": [
+   "csv"
+  ],
+  "source_ids": {
+   "csv": "2027-09-11-gun-run"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": true
+ }
+]

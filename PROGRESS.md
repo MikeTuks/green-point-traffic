@@ -9,13 +9,15 @@ things actually stand.
 | Phase | Status |
 |---|---|
 | 0. Traffic logger | **Done, running** |
-| 6–9. Event scraper (DHL, TheSportsDB, City, CSV loader, merge, hardening) | **In progress:** DHL, TheSportsDB and City scrapers done (12 Oct) |
+| 6–9. Event scraper (DHL, TheSportsDB, City, CSV loader, merge, hardening) | **In progress:** scrapers, merge and `daily.yml` done (12 Oct); Phase 9 hardening next |
 | 10. Predictions + web page | Not started |
 | 11. Learning | Not started |
 | 12. Extras (issue form, ntfy alerts) | Not started |
 
 ## Phase 0: what's in place
-- `scripts/log_traffic.py` checks the CSVs in `data/` and logs only during
+- `scripts/log_traffic.py` reads `data/events.json` (falls back to
+  `events_manual.csv` if missing) plus the closure and control-day CSVs,
+  and logs only during
   event windows (start − 5 h to end + 3 h; 10:00–23:00 if time TBC),
   closure windows and control days. Each reading is encrypted on its own
   with the public age key and appended to `data/traffic/YYYY-MM.jsonl.age`.
@@ -108,21 +110,23 @@ in `data/events_manual.csv` (Cycle Tour closures in `closures_manual.csv`).
 - [ ] Optional: delete the unused "Traffic" environment in repo settings.
 
 ## Next step
-Phase 6–7c done: `scripts/scrapers/{base,dhl_stadium,sportsdb,capetown_gov}.py`,
-`scripts/scrape_events.py` (prints results, updates
-`data/needs_review.json` and `data/seen_releases.json`; run from
-`scripts/`), tests in `tests/test_scrapers.py` with fixtures. City
-listing: `web1.capetown.gov.za/web1/newsandnotices/Home/Releases?category=Media releases`
-(~2 months, no paging); release text in `article.content`. Next:
-1. 7d `load_manual.py`.
-2. 8 `merge_events.py` + `classify.py` → `events.json`, `daily.yml`;
-   logger switches from the CSV to `events.json`.
-Not covered automatically: Currie Cup kick-offs (CSV/DHL only).
+Phases 6–8 done (12 Oct): scrapers in `scripts/scrapers/`,
+`load_manual.py`, `classify.py`, `merge_events.py` → `data/events.json`;
+`daily.yml` runs it at 06:17 SAST and on pushes that edit the manual
+CSVs. City listing: `web1.capetown.gov.za/web1/newsandnotices/Home/Releases?category=Media releases`
+(~2 months, no paging); release text in `article.content`.
+- `daily.yml` currently fails on **any** source error (emails each time).
+  Phase 9: `scrape_health.json` with a 3-day structural-failure
+  threshold, `tests.yml`, then watch the output for 1–2 weeks.
+- Not covered automatically: Currie Cup kick-offs (CSV/DHL only); games
+  missing from DHL are only found when they are the next home game.
+- Review items go to `data/needs_review.json`; nothing alerts on them yet
+  (ntfy is Phase 12).
 
 ## Resuming in a new session
     cd "Side Projects/green-point-traffic"
     git pull
     .venv/Scripts/python -m pytest -q tests
     .venv/Scripts/python scripts/log_traffic.py --check
-    .venv/Scripts/python scripts/scrape_events.py   # ~1 min, live
+    .venv/Scripts/python scripts/merge_events.py    # ~1 min, live; writes events.json
     gh run list --workflow log_traffic.yml --limit 10

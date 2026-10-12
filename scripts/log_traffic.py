@@ -2,6 +2,8 @@
 
 Runs every 15 minutes from GitHub Actions. Exits quietly unless an event
 window, closure window or control-day window is active (or --force).
+Events come from data/events.json (written daily by merge_events.py), or
+from events_manual.csv if that file does not exist yet.
 Each reading is encrypted on its own with the public age key and
 appended as one base64 line to data/traffic/YYYY-MM.jsonl.age, so the
 logger never needs the private key.
@@ -58,7 +60,7 @@ def event_windows(rows):
         first = date.fromisoformat(row["date"])
         last = date.fromisoformat(row["end_date"]) if row.get("end_date") else first
         category = row.get("category") or "sport"
-        event_id = f"{first.isoformat()}-{slug(row['name'])}"
+        event_id = row.get("event_id") or f"{first.isoformat()}-{slug(row['name'])}"
         day = first
         while day <= last:
             start = at(day, time.fromisoformat(row["time"]) if row.get("time")
@@ -67,6 +69,8 @@ def event_windows(rows):
                 end = at(day, time.fromisoformat(row["end_time"]))
             else:
                 end = start + DURATION.get(category, timedelta(hours=3))
+            if end <= start:  # ends after midnight
+                end += timedelta(days=1)
             if row.get("time"):
                 win = (start - BEFORE, end + AFTER)
             else:
@@ -75,6 +79,19 @@ def event_windows(rows):
                             "start": start, "end": end})
             day += timedelta(days=1)
     return windows
+
+
+def json_rows(events):
+    """events.json events as event_windows() rows (start/end times apply to each day)."""
+    rows = []
+    for e in events:
+        if e["status"] == "cancelled":
+            continue
+        start, end = datetime.fromisoformat(e["start"]), datetime.fromisoformat(e["end_estimate"])
+        rows.append({"event_id": e["id"], "name": e["name"], "date": start.date().isoformat(),
+                     "end_date": e.get("end_date") or "", "time": f"{start:%H:%M}" if e["time_confirmed"] else "",
+                     "end_time": f"{end:%H:%M}", "category": e["category"]})
+    return rows
 
 
 def closure_windows(rows):
@@ -104,7 +121,11 @@ def control_windows(rows, event_days):
 
 def active_window(now):
     """Return the active window, preferring events, then closures, then control days."""
-    events = event_windows(read_csv("events_manual.csv"))
+    path = DATA / "events.json"
+    if path.exists():
+        events = event_windows(json_rows(json.loads(path.read_text(encoding="utf-8"))))
+    else:
+        events = event_windows(read_csv("events_manual.csv"))
     closures = closure_windows(read_csv("closures_manual.csv"))
     event_days = {w["start"].date() for w in events + closures}
     controls = control_windows(read_csv("control_days.csv"), event_days)

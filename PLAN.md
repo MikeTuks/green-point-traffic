@@ -314,20 +314,24 @@ Other rules:
       "name": "Stormers vs Bristol Bears",
       "start": "2026-10-17T16:15:00+02:00",
       "end_estimate": "2026-10-17T18:15:00+02:00",
+      "end_date": null,      // last day of a multi-day event
       "time_confirmed": true,
       "category": "sport",   // sport | concert | race | parade | other | unknown
       "size": "medium",      // small | medium | big
       "crowd_hint": null,
       "closures": [],
-      "sources": ["dhl_stadium", "stormers"],
+      "sources": ["csv", "dhl_stadium", "sportsdb"],
       "source_ids": {"dhl_stadium": "event-12"},
       "status": "confirmed", // confirmed | unconfirmed | cancelled
       "rescheduled_from": null,
       "override": false
     }
 
-Default `end_estimate`: sport start + 2 h; concert start + 4 h; races and
-parades use closure end, else start + 6 h.
+Default `end_estimate`: CSV `end_time` or DHL end if given; else sport
+start + 2 h; concert start + 4 h; races and parades use closure end, else
+start + 6 h; other + 3 h. For multi-day events, `start` is the first day
+and `end_estimate` the last day; the logger applies their times of day to
+every day in between.
 
 ### Traffic log (`data/traffic/YYYY-MM.jsonl.age`)
 Append-only JSONL, one line per reading, encrypted with `age` before

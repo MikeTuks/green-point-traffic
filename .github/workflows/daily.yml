@@ -1,0 +1,58 @@
+name: Daily events
+
+# Scrape, merge and write data/events.json (the logger reads it).
+# Also runs when the manual CSVs are edited, so changes reach the logger
+# without waiting for the next morning.
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - data/events_manual.csv
+      - data/closures_manual.csv
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  events:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -q -r requirements.txt
+
+      - name: Scrape and merge
+        id: merge
+        run: python scripts/merge_events.py || echo "failed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json data/needs_review.json data/seen_releases.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update events"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
+
+      - name: Fail if a source failed
+        if: steps.merge.outputs.failed == 'true'
+        run: |
+          echo "A source failed; see the 'Scrape and merge' step."
+          exit 1

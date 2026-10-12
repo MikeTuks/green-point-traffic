@@ -11,7 +11,7 @@ from .base import DEFAULT_TIME, ScrapeError, get_json, now_utc, utc_to_sast
 
 URL = "https://api.dhlstadium.co.za/api/events"
 PARAMS = {"pagination[pageSize]": 100, "populate[event][populate][0]": "daterange"}
-CATEGORY = {"Sporting": "sport", "Concerts": "concert"}
+CATEGORY = {"Sporting": "sport", "Concerts": "concert", "Showcase Events": "other", "Other Events": "other"}
 
 
 def parse(data, fetched_at):
