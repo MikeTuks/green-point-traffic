@@ -9,7 +9,7 @@ things actually stand.
 | Phase | Status |
 |---|---|
 | 0. Traffic logger | **Done, running** |
-| 6–9. Event scraper (DHL, TheSportsDB, City, CSV loader, merge, hardening) | **In progress:** DHL + TheSportsDB scrapers done (12 Oct) |
+| 6–9. Event scraper (DHL, TheSportsDB, City, CSV loader, merge, hardening) | **In progress:** DHL, TheSportsDB and City scrapers done (12 Oct) |
 | 10. Predictions + web page | Not started |
 | 11. Learning | Not started |
 | 12. Extras (issue form, ntfy alerts) | Not started |
@@ -60,7 +60,8 @@ things actually stand.
 | Sat 7 & 14 Nov | Control days (checked: no stadium events) | 10:00–23:00 |
 | 5–6 Dec | HSBC SVNS (10:00, end est. 20:00) | 05:00–23:00 each day |
 
-More home games through April 2027 are in `data/events_manual.csv`.
+More home games through April 2027, and the 2027 races and parades, are
+in `data/events_manual.csv` (Cycle Tour closures in `closures_manual.csv`).
 
 ## Findings worth remembering
 - **DHL Stadium API (recon 12 Oct):** public Strapi API, no auth, no
@@ -98,13 +99,22 @@ More home games through April 2027 are in `data/events_manual.csv`.
       `events_manual.csv` (12 Oct). SVNS set to 10:00–20:00 per day.
 - [ ] Before 5 Dec: confirm SVNS 2026 daily end time (20:00 is an
       estimate; DHL API gives 10:00 start, no end).
+- [ ] Confirm estimated 2027 dates/times in the CSVs (added 12 Oct):
+      Street Parade 2 Jan (date and route both unknown; 2026 was 5 Jan
+      via Somerset Rd), Pride Mardi Gras 27–28 Feb (one listing says 28
+      Feb), Gun Run 11–12 Sep (mid-Sep pattern), Cycle Tour expo 11–13
+      Mar and closures (2026 pattern). Confirmed: Cycle Tour race 14 Mar,
+      Marathon 23 May (Saturday races 22 May).
 - [ ] Optional: delete the unused "Traffic" environment in repo settings.
 
 ## Next step
-Phase 6–7a/b done: `scripts/scrapers/{base,dhl_stadium,sportsdb}.py`,
-`scripts/scrape_events.py` (prints results; run from `scripts/`), tests
-in `tests/test_scrapers.py` with fixtures. Next:
-1. 7c `capetown_gov.py` (flag-only) and 7d `load_manual.py`.
+Phase 6–7c done: `scripts/scrapers/{base,dhl_stadium,sportsdb,capetown_gov}.py`,
+`scripts/scrape_events.py` (prints results, updates
+`data/needs_review.json` and `data/seen_releases.json`; run from
+`scripts/`), tests in `tests/test_scrapers.py` with fixtures. City
+listing: `web1.capetown.gov.za/web1/newsandnotices/Home/Releases?category=Media releases`
+(~2 months, no paging); release text in `article.content`. Next:
+1. 7d `load_manual.py`.
 2. 8 `merge_events.py` + `classify.py` → `events.json`, `daily.yml`;
    logger switches from the CSV to `events.json`.
 Not covered automatically: Currie Cup kick-offs (CSV/DHL only).

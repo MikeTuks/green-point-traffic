@@ -6,7 +6,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from scrapers import dhl_stadium, sportsdb  # noqa: E402
+from scrapers import capetown_gov, dhl_stadium, sportsdb  # noqa: E402
 from scrapers.base import ScrapeError  # noqa: E402
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
@@ -67,3 +67,27 @@ def test_sportsdb_helpers():
     assert sportsdb.season("2027-01-16") == "2026-2027"
     assert sportsdb.season("2026-10-17") == "2026-2027"
     assert sportsdb.opponent_words("DHL Stormers vs Vodacom Bulls") == ["Vodacom", "Bulls"]
+
+
+def test_city_listing_parses_cards():
+    releases = capetown_gov.parse_listing((FIXTURES / "city_listing.html").read_text(encoding="utf-8"))
+    assert len(releases) == 3
+    first = releases[0]
+    assert first["url"].startswith("https://web1.capetown.gov.za/web1/newsandnotices/Home/Release/")
+    assert "?" not in first["url"]
+    assert len(first["date"]) == 10 and first["title"]
+
+
+def test_city_release_text_and_keywords():
+    text = capetown_gov.release_text((FIXTURES / "city_release.html").read_text(encoding="utf-8"))
+    assert "Fish Hoek" in text
+    assert capetown_gov.matches("Road closures on Fritz Sonnenberg Road and Beach Road, Green Point") == [
+        "beach road", "fritz sonnenberg", "green point"]
+    assert capetown_gov.matches(text) == []
+
+
+def test_city_structural_change_raises():
+    with pytest.raises(ScrapeError):
+        capetown_gov.parse_listing("<html><body>nothing</body></html>")
+    with pytest.raises(ScrapeError):
+        capetown_gov.release_text("<html></html>")

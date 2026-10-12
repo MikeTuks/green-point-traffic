@@ -21,11 +21,19 @@ class ScrapeError(Exception):
 
 def get_json(url, params=None):
     """GET a JSON document, retrying twice with backoff."""
+    return _get(url, params, lambda resp: resp.json())
+
+
+def get_html(url, params=None):
+    return _get(url, params, lambda resp: resp.text)
+
+
+def _get(url, params, decode):
     for attempt in range(RETRIES + 1):
         try:
             resp = requests.get(url, params=params, headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
             resp.raise_for_status()
-            return resp.json()
+            return decode(resp)
         except (requests.RequestException, ValueError) as e:
             if attempt == RETRIES:
                 raise ScrapeError(f"{url}: {type(e).__name__}") from None
