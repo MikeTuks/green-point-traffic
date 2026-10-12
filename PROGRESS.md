@@ -9,7 +9,7 @@ things actually stand.
 | Phase | Status |
 |---|---|
 | 0. Traffic logger | **Done, running** |
-| 6–9. Event scraper (DHL, Stormers, City, CSV loader, merge, hardening) | Recon done (12 Oct); **blocked on a decision** (see Next step) |
+| 6–9. Event scraper (DHL, TheSportsDB, City, CSV loader, merge, hardening) | **In progress:** DHL + TheSportsDB scrapers done (12 Oct) |
 | 10. Predictions + web page | Not started |
 | 11. Learning | Not started |
 | 12. Extras (issue form, ntfy alerts) | Not started |
@@ -76,7 +76,13 @@ More home games through April 2027 are in `data/events_manual.csv`.
   `startDate` and venue, plus a match JSON blob (`dateTime` UTC, `tbc`,
   `venue`). robots.txt allows it. **But their terms forbid any "robot,
   spider ... or manual process to monitor, copy" the site without written
-  consent, and reuse on another website.**
+  consent, and reuse on another website.** Decided 12 Oct: don't scrape
+  it, don't ask for consent; use TheSportsDB instead.
+- **TheSportsDB (free key `123`):** Stormers team 136670, URC league 4446,
+  Champions Cup 4550. Times correct (UTC, no `Z`). Free caps: 3 results
+  per `eventsday.php` (per league), 1 per `searchevents.php` (partial
+  name match: `Stormers_vs_Racing` finds "Racing Métro 92"), 1 for
+  `eventsnext.php`. A full live run takes ~55 s (2.5 s between calls).
 - CSV corrected from Stormers times on 12 Oct: Bulls 15:00→16:00,
   Cardiff 16:00→17:00, added Zebre Parma 30 Jan 17:00, SVNS start
   08:00→10:00 (DHL).
@@ -95,13 +101,18 @@ More home games through April 2027 are in `data/events_manual.csv`.
 - [ ] Optional: delete the unused "Traffic" environment in repo settings.
 
 ## Next step
-Decide how to get Stormers kick-off times given their terms (ask
-Stormers for consent, or DHL API + manual CSV times), then build
-`scrapers/base.py` and `dhl_stadium.py` (Phase 6–7a).
+Phase 6–7a/b done: `scripts/scrapers/{base,dhl_stadium,sportsdb}.py`,
+`scripts/scrape_events.py` (prints results; run from `scripts/`), tests
+in `tests/test_scrapers.py` with fixtures. Next:
+1. 7c `capetown_gov.py` (flag-only) and 7d `load_manual.py`.
+2. 8 `merge_events.py` + `classify.py` → `events.json`, `daily.yml`;
+   logger switches from the CSV to `events.json`.
+Not covered automatically: Currie Cup kick-offs (CSV/DHL only).
 
 ## Resuming in a new session
     cd "Side Projects/green-point-traffic"
     git pull
     .venv/Scripts/python -m pytest -q tests
     .venv/Scripts/python scripts/log_traffic.py --check
+    .venv/Scripts/python scripts/scrape_events.py   # ~1 min, live
     gh run list --workflow log_traffic.yml --limit 10

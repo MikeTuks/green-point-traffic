@@ -1,0 +1,37 @@
+{
+ "events": [
+  {
+   "idEvent": "2550128",
+   "strEvent": "Stormers vs Ulster",
+   "idHomeTeam": "136670",
+   "idAwayTeam": "135605",
+   "strTimestamp": "2026-10-31T12:45:00",
+   "dateEvent": "2026-10-31",
+   "strTime": "12:45:00",
+   "strVenue": "DHL Stadium",
+   "strLeague": "United Rugby Championship"
+  },
+  {
+   "idEvent": "2550129",
+   "strEvent": "Bulls vs Scarlets",
+   "idHomeTeam": "136666",
+   "idAwayTeam": "135604",
+   "strTimestamp": "2026-10-31T15:00:00",
+   "dateEvent": "2026-10-31",
+   "strTime": "15:00:00",
+   "strVenue": "Loftus Versfeld Stadium",
+   "strLeague": "United Rugby Championship"
+  },
+  {
+   "idEvent": "2550130",
+   "strEvent": "Benetton vs Edinburgh",
+   "idHomeTeam": "135595",
+   "idAwayTeam": "135598",
+   "strTimestamp": "2026-10-31T15:00:00",
+   "dateEvent": "2026-10-31",
+   "strTime": "15:00:00",
+   "strVenue": "Stadio di Monigo",
+   "strLeague": "United Rugby Championship"
+  }
+ ]
+}

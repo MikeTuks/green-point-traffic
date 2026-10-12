@@ -54,8 +54,9 @@ month, each billed as at least 1 minute, against 2,000 free minutes.
 ### Overview
 | # | Source                              | Method            | Covers                              | Role |
 |---|-------------------------------------|-------------------|-------------------------------------|------|
-| 1 | DHL Stadium events                  | Hidden JSON / Playwright | Everything at the stadium    | Primary (dates, titles; times if JSON is UTC-correct) |
-| 2 | Stormers tickets hub / match centre | WordPress JSON or HTML | Stormers home games, kick-offs | Primary (rugby times) |
+| 1 | DHL Stadium events                  | Public Strapi JSON API | Everything at the stadium     | Primary (dates, titles, categories; times in UTC) |
+| 2 | TheSportsDB (free API key)          | JSON API          | Stormers home games, kick-offs      | Primary (rugby times) |
+| – | Stormers website                    | —                 | —                                   | **Not scraped** (terms forbid automated access) |
 | 3 | City of Cape Town media releases    | HTML listing, keyword filter | Races, parades, closures | **Flag only** → needs-review + alert |
 | 4 | Manual CSVs (events + closures)     | Edited in GitHub  | Recurring events, closures, overrides | Backbone |
 | – | Promoters (Big Concerts etc.)       | Manual check      | Concert announcements               | Manual only |
@@ -64,28 +65,28 @@ month, each billed as at least 1 minute, against 2,000 free minutes.
 | – | Closure PDF parsing                 | —                 | —                                   | **Dropped** (3–5 PDFs a year, changing layouts; typed into CSV instead) |
 
 ### 1. DHL Stadium events
-- `dhlstadium.co.za/events` is a JavaScript single-page app; the raw HTML
-  is an empty shell. Find the JSON endpoint behind it via DevTools →
-  Network → Fetch/XHR and call it directly. Playwright is the fallback.
+- `dhlstadium.co.za/events` is an Angular app backed by a public Strapi
+  API (`api.dhlstadium.co.za/api/events`, see `dhl_stadium.py`). No
+  robots.txt and no terms page (checked 12 Oct 2026).
 - Lists Stormers (URC, Champions Cup, Currie Cup), Springbok tests,
   touring matches, HSBC SVNS, Bafana friendlies and concerts (Concerts
   tab). Detail pages contain FAQs with gate times, kick-off, shuttles and
   road closures.
-- **The "Starts" field looks shifted** (Stormers v Bristol "14:15" for a
-  16:15 kick-off; Boks v All Blacks "15:10" for 17:10). Exactly 2 h in
-  both cases suggests UTC shown as local time. **First check the raw
-  JSON:** if it holds a UTC timestamp, parse it with the timezone and DHL
-  becomes a reliable time source. Otherwise take times from Stormers or
-  the detail-page FAQ. Either way, keep a fixture test against known
-  kick-offs.
-- Check `/robots.txt` and the site terms before scraping.
+- **Checked:** the API stores UTC; the page's "Starts" shows it
+  unconverted (hence 2 h early). Even converted, some rugby kick-offs
+  are 1 h out, so rugby times come from TheSportsDB. Midnight SAST is a
+  "time TBC" placeholder.
 
-### 2. Stormers tickets hub / match centre
-- Official home fixtures with kick-off times. About 14 home dates a season
-  (9 URC, 2 Champions Cup pool, 3 Currie Cup).
-- The site runs on WordPress: try `/wp-json/` for structured data,
-  otherwise parse the tickets-hub HTML. No official `.ics` was found.
-- Keep home games at DHL Stadium only.
+### 2. TheSportsDB (Stormers kick-offs)
+- The Stormers site's terms forbid any robot or automated copying, and
+  `/wp-json/` needs a login, so it is not scraped.
+- TheSportsDB's free key ("anyone can use", 30 requests/min) has correct
+  times but caps results (3 per day-and-league query, 1 per search). For
+  each upcoming Stormers date from DHL: ask the day per league (URC 4446,
+  Champions Cup 4550), then fall back to a name search matched on date;
+  also ask for the next home game (catches games DHL omits).
+- Currie Cup games are not covered (different team entry); they rely on
+  DHL times and the CSV.
 
 ### 3. City of Cape Town media releases (flag only)
 - Listing at `web1.capetown.gov.za/web1/newsandnotices/` (category: Media
@@ -181,8 +182,8 @@ other's ("Stormers" vs "Stormers v Bulls"). At one venue that's
 acceptable; two different events matching on the same day go to review.
 
 Field priority:
-- name, date: CSV > DHL Stadium > Stormers
-- **time: CSV > Stormers > DHL JSON (if UTC-correct) > DHL FAQ > DHL "Starts"**
+- name, date: CSV > DHL Stadium > TheSportsDB
+- **time: CSV > TheSportsDB > DHL JSON**
 - crowd, closures: CSV > DHL FAQ
 - category: CSV > source label > keyword classifier
 
@@ -284,7 +285,7 @@ Other rules:
     │   ├── scrapers/
     │   │   ├── base.py
     │   │   ├── dhl_stadium.py
-    │   │   ├── stormers.py
+    │   │   ├── sportsdb.py
     │   │   └── capetown_gov.py
     │   ├── scrape_events.py
     │   ├── load_manual.py
@@ -454,7 +455,7 @@ longer.
    robots.txt/terms; check whether DHL's raw JSON times are UTC.
 7. **Core scrapers:**
    a. `dhl_stadium.py` (find the JSON endpoint first)
-   b. `stormers.py` (times)
+   b. `sportsdb.py` (Stormers times; replaces scraping stormers.co.za)
    c. `capetown_gov.py` (flag-only + alert)
    d. `load_manual.py` (events + closures CSVs, annual list seeded)
 8. **Merge and classify:** `merge_events.py`, `classify.py`,

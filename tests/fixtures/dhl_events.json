@@ -1,0 +1,106 @@
+{
+ "data": [
+  {
+   "id": 396,
+   "attributes": {
+    "title": "Andrea Bocelli LIVE",
+    "category": "Concerts",
+    "slug": "andrea-bocelli-dhl-stadium",
+    "event": [
+     {
+      "id": 406,
+      "title": "Andrea Bocelli",
+      "daterange": [
+       {
+        "id": 543,
+        "start": "2025-04-16T18:00:00.000Z",
+        "end": null,
+        "gateopen": null
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 457,
+   "attributes": {
+    "title": "HSBC SVNS Cape Town",
+    "category": "Sporting",
+    "slug": "hsbc-svns-cape-town_rugby-sports-international-event-of-the-year",
+    "event": [
+     {
+      "id": 469,
+      "title": "HSBC SVNS Cape Town",
+      "daterange": [
+       {
+        "id": 622,
+        "start": "2026-12-05T08:00:00.000Z",
+        "end": null,
+        "gateopen": "09:00:00"
+       },
+       {
+        "id": 623,
+        "start": "2026-12-06T08:00:00.000Z",
+        "end": null,
+        "gateopen": "09:00:00"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 470,
+   "attributes": {
+    "title": "DHL Stormers vs Bristol Bears ",
+    "category": "Sporting",
+    "slug": "dhl-stormers-vs-bristol-bears-Investec-Champions-Cup-20267_season",
+    "event": [
+     {
+      "id": 482,
+      "title": "DHL Stormers vs Bristol Bears ",
+      "daterange": [
+       {
+        "id": 638,
+        "start": "2026-10-17T14:15:00.000Z",
+        "end": null,
+        "gateopen": "14:15:00"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 472,
+   "attributes": {
+    "title": "DHL Stormers vs Ulster ",
+    "category": "Sporting",
+    "slug": "event-16",
+    "event": [
+     {
+      "id": 484,
+      "title": "DHL Stormers vs Ulster ",
+      "daterange": [
+       {
+        "id": 640,
+        "start": "2026-10-31T11:45:00.000Z",
+        "end": null,
+        "gateopen": "11:45:00"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "meta": {
+  "pagination": {
+   "page": 1,
+   "pageSize": 100,
+   "pageCount": 1,
+   "total": 4
+  }
+ }
+}
