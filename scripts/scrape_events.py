@@ -4,6 +4,7 @@ DHL Stadium lists every event; TheSportsDB is then asked for the
 kick-off of each upcoming Stormers game on those dates. City media
 releases mentioning Green Point are added to data/needs_review.json.
 Each source runs independently: one failure never stops the others.
+merge_events.py records each source's outcome in data/scrape_health.json.
 merge_events.py calls scrape(); run this file on its own to just print
 what the sources return.
 
@@ -18,6 +19,8 @@ from scrapers import capetown_gov, dhl_stadium, sportsdb
 from scrapers.base import ScrapeError
 
 DATA = Path(__file__).resolve().parent.parent / "data"
+SOURCES = ("dhl_stadium", "sportsdb", "capetown_gov")
+FAIL_DAYS = 3  # a source failing this many days running fails the daily workflow
 
 
 def stormers_games(records, today):
@@ -69,6 +72,29 @@ def scrape(today):
     except ScrapeError as e:
         errors["capetown_gov"], new_releases = str(e), []
     return results, errors, new_releases
+
+
+def update_health(errors, counts, today):
+    """Record each source's outcome in scrape_health.json.
+
+    `counts` is {source: records returned} for the sources that ran OK.
+    Returns the sources that have failed FAIL_DAYS days running (counted
+    from the first failure, so several runs on one day count once).
+    """
+    health = read_json("scrape_health.json", {})
+    failing = []
+    for source in SOURCES:
+        h = health.get(source, {"last_success": None, "events": None})
+        if source in errors:
+            since = h.get("failing_since") or today.isoformat()
+            h = {**h, "error": errors[source], "failing_since": since}
+            if (today - date.fromisoformat(since)).days >= FAIL_DAYS - 1:
+                failing.append(source)
+        else:
+            h = {"last_success": today.isoformat(), "events": counts[source], "error": None, "failing_since": None}
+        health[source] = h
+    write_json("scrape_health.json", health)
+    return failing
 
 
 def report(results, errors, new_releases, today):

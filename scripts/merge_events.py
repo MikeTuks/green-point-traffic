@@ -9,6 +9,7 @@ Field priority: name/date CSV > DHL > TheSportsDB; time CSV > TheSportsDB
 matches, reschedules and unknown categories of upcoming events go to
 needs_review.json. Events that no source lists any more become
 "unconfirmed" if still upcoming (only when all their sources ran OK).
+Exits 1 only when a source has failed 3 days running (scrape_health.json).
 
     python scripts/merge_events.py
 """
@@ -19,7 +20,7 @@ from rapidfuzz import fuzz, utils
 
 import classify
 import load_manual
-from scrape_events import add_review, read_json, report, scrape, write_json
+from scrape_events import FAIL_DAYS, add_review, read_json, report, scrape, update_health, write_json
 from scrapers.base import DEFAULT_TIME, SAST
 
 PRIORITY = ("csv", "dhl_stadium", "sportsdb")
@@ -195,7 +196,11 @@ def main():
               f"{e['name']}  ({', '.join(e['sources'])}){flags}")
     for item in new:
         print(f"  review: {item['type']} {item.get('event_id') or ''} {item.get('detail') or item.get('title')}")
-    return 1 if errors else 0
+    counts = {**{s: len(r) for s, r in results.items()}, "capetown_gov": len(new_releases)}
+    failing = update_health(errors, counts, today)
+    for source in failing:
+        print(f"error: {source} has failed {FAIL_DAYS} days running (see data/scrape_health.json)")
+    return 1 if failing else 0
 
 
 if __name__ == "__main__":
