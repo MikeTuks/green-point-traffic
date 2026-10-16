@@ -89,6 +89,10 @@ in `data/events_manual.csv` (Cycle Tour closures in `closures_manual.csv`).
 - CSV corrected from Stormers times on 12 Oct: Bulls 15:00→16:00,
   Cardiff 16:00→17:00, added Zebre Parma 30 Jan 17:00, SVNS start
   08:00→10:00 (DHL).
+- 16 Oct: TheSportsDB `eventsnext`/`searchevents` returned 503 (their
+  outage), so `daily.yml` failed and DHL's known 1 h-early times showed
+  up as 4 `time_conflict` review items (Ulster, Lions, Bulls, Cardiff).
+  Checked against TheSportsDB `eventsday`: CSV times are right; ignore.
 - The Sharks home game on 10 Oct was missed (logger not yet live).
 - November has no home club rugby (international window).
 
