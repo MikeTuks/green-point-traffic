@@ -188,5 +188,29 @@
    "dhl stadium"
   ],
   "added": "2026-10-12"
+ },
+ {
+  "type": "time_conflict",
+  "event_id": "2026-10-31-stormers-vs-ulster",
+  "detail": "CSV 14:45, dhl_stadium 13:45",
+  "added": "2026-10-16"
+ },
+ {
+  "type": "time_conflict",
+  "event_id": "2026-12-19-stormers-vs-lions",
+  "detail": "CSV 16:00, dhl_stadium 15:00",
+  "added": "2026-10-16"
+ },
+ {
+  "type": "time_conflict",
+  "event_id": "2027-01-03-stormers-vs-bulls",
+  "detail": "CSV 16:00, dhl_stadium 15:00",
+  "added": "2026-10-16"
+ },
+ {
+  "type": "time_conflict",
+  "event_id": "2027-01-23-stormers-vs-cardiff-rugby",
+  "detail": "CSV 17:00, dhl_stadium 16:00",
+  "added": "2026-10-16"
  }
 ]

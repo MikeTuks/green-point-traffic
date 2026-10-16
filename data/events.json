@@ -1465,8 +1465,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2026-10-17-stormers-vs-bristol-bears",
@@ -1491,8 +1490,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2026-10-24-stormers-vs-scarlets",
@@ -1517,8 +1515,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2026-10-31-stormers-vs-ulster",
@@ -1567,8 +1564,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2026-12-19-stormers-vs-lions",
@@ -1615,8 +1611,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2027-01-03-stormers-vs-bulls",
@@ -1641,8 +1636,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2027-01-16-stormers-vs-racing-92",
@@ -1667,8 +1661,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2027-01-23-stormers-vs-cardiff-rugby",
@@ -1794,8 +1787,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2027-04-17-stormers-vs-benetton-rugby",
@@ -1820,8 +1812,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2027-04-24-stormers-vs-munster",
