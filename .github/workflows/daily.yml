@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/events.json data/needs_review.json data/seen_releases.json
+          git add data/events.json data/needs_review.json data/seen_releases.json data/scrape_health.json
           git diff --cached --quiet && exit 0
           git commit -m "Update events"
           for i in 1 2 3; do
@@ -51,8 +51,8 @@ jobs:
           done
           exit 1
 
-      - name: Fail if a source failed
+      - name: Fail if a source keeps failing
         if: steps.merge.outputs.failed == 'true'
         run: |
-          echo "A source failed; see the 'Scrape and merge' step."
+          echo "A source has failed 3 days running, or the script crashed; see the 'Scrape and merge' step."
           exit 1

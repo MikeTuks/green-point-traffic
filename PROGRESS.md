@@ -9,7 +9,7 @@ things actually stand.
 | Phase | Status |
 |---|---|
 | 0. Traffic logger | **Done, running** |
-| 6–9. Event scraper (DHL, TheSportsDB, City, CSV loader, merge, hardening) | **In progress:** scrapers, merge and `daily.yml` done (12 Oct); Phase 9 hardening next |
+| 6–9. Event scraper (DHL, TheSportsDB, City, CSV loader, merge, hardening) | **In progress:** scrapers, merge and `daily.yml` done (12 Oct); Phase 9 hardening built on branch `phase-9-hardening` (16 Oct), merge after Sat 17 Oct's window; then watch output 1–2 weeks |
 | 10. Predictions + web page | Not started |
 | 11. Learning | Not started |
 | 12. Extras (issue form, ntfy alerts) | Not started |
@@ -119,9 +119,12 @@ Phases 6–8 done (12 Oct): scrapers in `scripts/scrapers/`,
 `daily.yml` runs it at 06:17 SAST and on pushes that edit the manual
 CSVs. City listing: `web1.capetown.gov.za/web1/newsandnotices/Home/Releases?category=Media releases`
 (~2 months, no paging); release text in `article.content`.
-- `daily.yml` currently fails on **any** source error (emails each time).
-  Phase 9: `scrape_health.json` with a 3-day structural-failure
-  threshold, `tests.yml`, then watch the output for 1–2 weeks.
+- Phase 9 (branch `phase-9-hardening`): `merge_events.py` writes
+  `data/scrape_health.json` (last success, event count, error,
+  `failing_since` per source) and exits 1 only when a source has failed
+  3 days running, so a one-day outage no longer turns `daily.yml` red.
+  `tests.yml` runs pytest on pushes touching scripts/tests. Not done:
+  ntfy alert (Phase 12). After merging, watch the output for 1–2 weeks.
 - Not covered automatically: Currie Cup kick-offs (CSV/DHL only); games
   missing from DHL are only found when they are the next home game.
 - Review items go to `data/needs_review.json`; nothing alerts on them yet
