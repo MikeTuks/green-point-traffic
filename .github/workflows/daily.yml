@@ -20,6 +20,7 @@ concurrency:
 permissions:
   contents: write
   actions: read
+  issues: write
 
 jobs:
   events:
@@ -37,6 +38,8 @@ jobs:
 
       - name: Scrape and merge
         id: merge
+        env:
+          NEW_REVIEW_FILE: ${{ runner.temp }}/new_review.md
         run: python scripts/merge_events.py || echo "failed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit and push
@@ -51,6 +54,14 @@ jobs:
             sleep 5
           done
           exit 1
+
+      - name: Open an issue for new review items
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BODY: ${{ runner.temp }}/new_review.md
+        run: |
+          [ -s "$BODY" ] || exit 0
+          gh issue create -R "$GITHUB_REPOSITORY" --title "New review items $(date +%F)" --body-file "$BODY"
 
       - name: Check the logger is still being triggered
         if: always()

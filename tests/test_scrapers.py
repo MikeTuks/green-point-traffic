@@ -84,6 +84,7 @@ def test_city_release_text_and_keywords():
     assert capetown_gov.matches("Road closures on Fritz Sonnenberg Road and Beach Road, Green Point") == [
         "beach road", "fritz sonnenberg", "green point"]
     assert capetown_gov.matches(text) == []
+    assert capetown_gov.matches("Water maintenance in Green Point: keep your taps closed") == []
 
 
 def test_city_structural_change_raises():

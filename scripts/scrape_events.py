@@ -12,7 +12,7 @@ what the sources return.
 """
 import json
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from scrapers import capetown_gov, dhl_stadium, sportsdb
@@ -21,12 +21,14 @@ from scrapers.base import ScrapeError
 DATA = Path(__file__).resolve().parent.parent / "data"
 SOURCES = ("dhl_stadium", "sportsdb", "capetown_gov")
 FAIL_DAYS = 3  # a source failing this many days running fails the daily workflow
+SPORTSDB_DAYS = 42  # fewer games asked, fewer requests on the shared free key
 
 
 def stormers_games(records, today):
-    """(date, title) of each upcoming Stormers game listed by DHL Stadium."""
+    """(date, title) of each Stormers game in the next SPORTSDB_DAYS days listed by DHL Stadium."""
+    last = (today + timedelta(days=SPORTSDB_DAYS)).isoformat()
     return sorted((r["start"][:10], r["name"]) for r in records
-                  if "stormers" in r["name"].lower() and r["start"][:10] >= today.isoformat())
+                  if "stormers" in r["name"].lower() and today.isoformat() <= r["start"][:10] <= last)
 
 
 def read_json(name, default):

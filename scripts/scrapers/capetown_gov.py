@@ -1,7 +1,7 @@
 """City of Cape Town media releases: flag only.
 
 Each release not seen before is fetched once; if its title or text
-mentions a Green Point road or place, it is returned for needs_review
+mentions a Green Point road or place and a closure, it is returned for needs_review
 (you copy any closures into the CSVs by hand). Nothing here creates or
 changes events. The listing covers about two months and has no paging.
 """
@@ -17,6 +17,7 @@ LISTING = "https://web1.capetown.gov.za/web1/newsandnotices/Home/Releases"
 PARAMS = {"category": "Media releases"}
 KEYWORDS = ("green point", "dhl stadium", "cape town stadium", "fritz sonnenberg", "somerset road",
             "beach road", "mouille point", "helen suzman", "vlei road", "fan walk")
+CLOSURE_WORDS = ("road closure", "closures", "closed to traffic", "detour", "traffic diversion")
 PAUSE = 1.0
 
 
@@ -44,7 +45,10 @@ def release_text(html):
 
 
 def matches(text):
+    """Green Point keywords in the text, or [] if it says nothing about closures."""
     text = text.lower()
+    if not any(w in text for w in CLOSURE_WORDS):
+        return []
     return sorted(k for k in KEYWORDS if k in text)
 
 

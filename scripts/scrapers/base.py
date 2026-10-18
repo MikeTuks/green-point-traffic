@@ -35,9 +35,10 @@ def _get(url, params, decode):
             resp.raise_for_status()
             return decode(resp)
         except (requests.RequestException, ValueError) as e:
+            status = getattr(getattr(e, "response", None), "status_code", None)
             if attempt == RETRIES:
-                raise ScrapeError(f"{url}: {type(e).__name__}") from None
-            _time.sleep(5 * 2 ** attempt)
+                raise ScrapeError(f"{url}: {type(e).__name__}{f' {status}' if status else ''}") from None
+            _time.sleep((60 if status == 429 else 5) * 2 ** attempt)
 
 
 def utc_to_sast(text):

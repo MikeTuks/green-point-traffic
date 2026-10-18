@@ -13,8 +13,10 @@ Exits 1 only when a source has failed 3 days running (scrape_health.json).
 
     python scripts/merge_events.py
 """
+import os
 import sys
 from datetime import date, datetime, timedelta
+from pathlib import Path
 
 from rapidfuzz import fuzz, utils
 
@@ -196,6 +198,10 @@ def main():
               f"{e['name']}  ({', '.join(e['sources'])}){flags}")
     for item in new:
         print(f"  review: {item['type']} {item.get('event_id') or ''} {item.get('detail') or item.get('title')}")
+    if path := os.environ.get("NEW_REVIEW_FILE"):
+        Path(path).write_text("".join(
+            f"- {i['type']}: {i.get('event_id') or i.get('title')} {i.get('detail') or i.get('url') or ''}\n"
+            for i in new_releases + new), encoding="utf-8")
     counts = {**{s: len(r) for s, r in results.items()}, "capetown_gov": len(new_releases)}
     failing = update_health(errors, counts, today)
     for source in failing:
