@@ -75,7 +75,8 @@ function chart(out) {
   v.forEach((m, i) => (m === null ? flush() : seg.push(i)));
   flush();
   return `
-    <div class="chart-wrap">
+    <div class="chart-wrap" data-from="${out.from}" data-top="${top}" data-bottom="${bottom}" data-values="${esc(JSON.stringify(v))}">
+      <div class="hover" hidden><span class="hover-dot"></span><span class="hover-text"></span></div>
       <span class="chart-label" style="top:0">+${Math.round(top)} min</span>
       <span class="chart-label" style="top:${y(0)}%">normal</span>
       <svg class="chart" viewBox="0 0 ${n} 100" preserveAspectRatio="none" height="140" aria-hidden="true">
@@ -176,6 +177,27 @@ document.addEventListener("click", (ev) => {
   button.setAttribute("aria-expanded", String(!open));
   detail.hidden = open;
 });
+
+function showHover(ev) {
+  const wrap = ev.target.closest(".chart-wrap");
+  document.querySelectorAll(".hover").forEach((h) => { if (!wrap || !wrap.contains(h)) h.hidden = true; });
+  if (!wrap) return;
+  const values = JSON.parse(wrap.dataset.values), n = values.length;
+  const box = wrap.querySelector(".chart").getBoundingClientRect();
+  const i = Math.max(0, Math.min(n - 1, Math.floor((ev.clientX - box.left) / box.width * n)));
+  const hover = wrap.querySelector(".hover"), v = values[i];
+  if (v === null) { hover.hidden = true; return; }
+  const top = +wrap.dataset.top, bottom = +wrap.dataset.bottom;
+  hover.style.left = `${(i + 0.5) / n * 100}%`;
+  hover.style.top = `${(top - v) / (top - bottom) * box.height}px`;
+  hover.querySelector(".hover-text").textContent =
+    `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v)} min at ${addMinutes(wrap.dataset.from, i * STEP)}`;
+  hover.classList.toggle("flip", i > n * 0.6);
+  hover.hidden = false;
+}
+
+document.addEventListener("pointermove", showHover);
+document.addEventListener("pointerdown", showHover);
 
 fetch("data.json", { cache: "no-cache" })
   .then((r) => (r.ok ? r.json() : Promise.reject(new Error(r.status))))

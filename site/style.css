@@ -184,7 +184,43 @@ summary:focus-visible {
   color: var(--soft);
 }
 
-.chart-label:first-child { transform: none; }
+.chart-label:nth-child(2) { transform: none; }
+
+.chart-wrap { touch-action: pan-y; }
+
+.hover {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hover[hidden] { display: none; }
+
+.hover-dot {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.hover-text {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--water);
+  color: var(--paper);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hover.flip .hover-text { left: auto; right: 10px; }
 
 .next-strips .strip { animation: tide 900ms cubic-bezier(.3, .7, .2, 1) 150ms both; }
 
