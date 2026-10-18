@@ -377,21 +377,12 @@ events used and their spread. Only this aggregated file is public.
    and departure (relative to `end_estimate`), with separate shapes per
    category (sport, concert) and per direction, scaled by size. Races and
    parades use their closure windows as hard "bad" periods.
-4. **Blending:** w · learned + (1 − w) · starter, w = n / (n + 3), using
-   medians, per category and direction.
-5. **Starter rules** (magnitudes are placeholders, tuned after the first
-   events):
-   | Size   | Peak extra delay |
-   |--------|------------------|
-   | small  | 3 min            |
-   | medium | 6 min            |
-   | big    | 12 min           |
-   - Sport: arrival ramps up from start − 3 h, peaks start − 1 h to start,
-     clears by start + 15 min. Departure from end to end + 1.5 h.
-   - Concert: arrival from start − 4 h to start; departure from end to
-     end + 2 h.
-   - Race/parade/expo: closure windows; if none, start − 1 h to
-     start + 6 h.
+4. **Blending:** medians of logged events per category, direction and
+   size; no starter values.
+5. **Starter rules:** dropped (18 Oct 2026). Oct–Jan is data collection;
+   delays come only from logged games. First observation (Stormers v
+   Bristol, 17 Oct): outbound +2–3 min about 2 h before kick-off, up to
+   +10 min 30–75 min after the end.
 6. **Output:** "bad from X, clear by Y" per direction, chart of expected
    vs normal, confidence from count and spread.
 
@@ -470,9 +461,10 @@ longer.
    and compare the output with known events.
 
 ### Then the app
-10. **Predictions + web page:** starter rules, charts, event list.
-11. **Learning:** `learn.py` with blending, two-anchor curves and
+Until Feb 2027: keep logging.
+10. **Learning (Feb 2027):** `learn.py`, curves from logged games plus
     baseline correction.
+11. **Web page:** charts, event list.
 12. **Extras:** "Add event" issue form, ntfy event alerts.
 
 ## Known risks
@@ -502,7 +494,6 @@ longer.
 ## Decisions still needed
 - ~~Destinations, directions and waypoints~~ decided (see Traffic
   measurement → Route); verified in Phase 0 step 1.
-- Control days (default: 2 non-event Saturdays a month, 10:00–23:00, plus
-  one weekday 15:00–21:00).
+- ~~Control days~~ decided: 2 non-event Saturdays a month where free,
+  10:00–23:00, plus one weekday 15:00–21:00.
 - Alert time (default 07:00 on event days).
-- Starter delay magnitudes (placeholders above).
