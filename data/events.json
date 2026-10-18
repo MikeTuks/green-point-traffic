@@ -1490,7 +1490,8 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium"
+   "dhl_stadium",
+   "sportsdb"
   ],
   "source_ids": {
    "csv": "2026-10-24-stormers-vs-scarlets",
@@ -1515,7 +1516,8 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium"
+   "dhl_stadium",
+   "sportsdb"
   ],
   "source_ids": {
    "csv": "2026-10-31-stormers-vs-ulster",
