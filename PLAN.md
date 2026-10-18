@@ -388,8 +388,7 @@ events used and their spread. Only this aggregated file is public.
 
 Expected data: roughly 25–30 events a year (about 14 Stormers dates plus
 tests, SVNS, friendlies and about 6 races/parades). Sport curves should be
-learned within a season; concerts (2–4 a year) stay on starter rules
-longer.
+learned within a season; concerts (2–4 a year) take longer to learn.
 
 ## Web app features
 - Upcoming events with badges; TBC, unconfirmed, cancelled, rescheduled

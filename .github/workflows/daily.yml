@@ -19,6 +19,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: read
 
 jobs:
   events:
@@ -50,6 +51,17 @@ jobs:
             sleep 5
           done
           exit 1
+
+      - name: Check the logger is still being triggered
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          since=$(date -u -d '24 hours ago' +%FT%TZ)
+          n=$(gh run list -R "$GITHUB_REPOSITORY" -w log_traffic.yml -L 200 --created ">=$since" \
+              --json conclusion --jq '[.[] | select(.conclusion == "success")] | length')
+          echo "$n successful logger runs in the last 24 h (expected about 96)"
+          [ "$n" -ge 72 ] || { echo "Too few logger runs; check cron-job.org."; exit 1; }
 
       - name: Fail if a source keeps failing
         if: steps.merge.outputs.failed == 'true'
