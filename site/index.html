@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Green Point traffic</title>
+  <meta name="description" content="When stadium events make the roads around Green Point slow, from logged traffic.">
+  <meta name="theme-color" content="#E9EFEE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12343B" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Green Point traffic</h1>
+    <p class="status loading" id="status">Loading events</p>
+  </header>
+  <main>
+    <section id="next" aria-live="polite"></section>
+    <section id="later" hidden>
+      <h2>Later</h2>
+      <ul id="later-list"></ul>
+    </section>
+  </main>
+  <footer class="key">
+    <svg class="key-swatch" viewBox="0 0 60 12" aria-hidden="true">
+      <rect x="0" width="14" height="12" class="slot calm"/>
+      <rect x="15" width="14" height="12" class="slot" style="--level:.45"/>
+      <rect x="30" width="14" height="12" class="slot" style="--level:.75"/>
+      <rect x="45" width="14" height="12" class="slot" style="--level:1"/>
+    </svg>
+    <p>Each block is 15 minutes. Red means at least 2 minutes slower than a normal day at that time, darker is worse. Grey means no data. Tap a strip for the detail.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

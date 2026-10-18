@@ -24,3 +24,7 @@ Thumbs.db
 
 # Local route checks
 local/
+
+# Built site and visual checks
+_site/
+_review/

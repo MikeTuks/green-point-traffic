@@ -1,0 +1,13 @@
+{
+  "name": "Green Point traffic",
+  "short_name": "GP traffic",
+  "description": "When stadium events make the roads around Green Point slow.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#E9EFEE",
+  "theme_color": "#12343B",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

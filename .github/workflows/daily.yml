@@ -42,11 +42,19 @@ jobs:
           NEW_REVIEW_FILE: ${{ runner.temp }}/new_review.md
         run: python scripts/merge_events.py || echo "failed=true" >> "$GITHUB_OUTPUT"
 
+      - name: Learn delay curves
+        env:
+          AGE_IDENTITY: ${{ secrets.AGE_IDENTITY }}
+        run: |
+          [ -n "$AGE_IDENTITY" ] || { echo "AGE_IDENTITY secret not set; keeping the old curves."; exit 0; }
+          python scripts/learn.py
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/needs_review.json data/seen_releases.json data/scrape_health.json
+          [ -f data/curves.json ] && git add data/curves.json
           git diff --cached --quiet && exit 0
           git commit -m "Update events"
           for i in 1 2 3; do
@@ -54,6 +62,13 @@ jobs:
             sleep 5
           done
           exit 1
+
+      - name: Build the web page
+        run: python scripts/build_site.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
       - name: Open an issue for new review items
         env:
@@ -79,3 +94,18 @@ jobs:
         run: |
           echo "A source has failed 3 days running, or the script crashed; see the 'Scrape and merge' step."
           exit 1
+
+  pages:
+    needs: events
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
