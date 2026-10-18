@@ -4,7 +4,8 @@
 
 Decrypts data/traffic/*.jsonl.age and writes data/curves.json: for each
 category/size/direction, the median extra delay (minutes) in 15-minute
-steps before the start (arrival) and after the end (departure), with the
+steps before the start (arrival), from the start until the end (during)
+and after the end (departure), with the
 lowest and highest event and the number of events. Extra delay is
 live - historic, minus the control-day median for that direction and hour.
 """
@@ -24,6 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 STEP = 15
 ARRIVAL = (-300, 0)  # minutes from start
+DURING = (0, 24 * 60)  # minutes from start, until the end
 DEPARTURE = (0, 180)  # minutes from end
 
 
@@ -69,7 +71,9 @@ def learn(readings, events):
         if r["window"] != "event" or e is None:
             continue
         key = f"{e['category']}/{e['size']}/{r['route']}"
+        during = r["min_from_end"] is not None and r["min_from_end"] < 0
         for anchor, minutes, span in (("arrival", r["min_from_start"], ARRIVAL),
+                                      ("during", r["min_from_start"] if during else None, DURING),
                                       ("departure", r["min_from_end"], DEPARTURE)):
             b = bin_of(minutes, span)
             if b is not None:
@@ -78,7 +82,7 @@ def learn(readings, events):
     curves = {}
     for (key, anchor, b), by_event in sorted(per_event.items()):
         values = [median(v) for v in by_event.values()]
-        curve = curves.setdefault(key, {"events": set(), "arrival": {}, "departure": {}})
+        curve = curves.setdefault(key, {"events": set(), "arrival": {}, "during": {}, "departure": {}})
         curve["events"].update(by_event)
         curve[anchor][str(b)] = {"median": round(median(values), 1), "low": round(min(values), 1),
                                  "high": round(max(values), 1), "n": len(values)}

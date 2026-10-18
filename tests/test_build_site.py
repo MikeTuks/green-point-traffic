@@ -22,6 +22,7 @@ def cell(m):
 CURVES = {"sport/medium/outbound": {
     "events": 1,
     "arrival": {"-120": cell(2.3), "-105": cell(2.9), "-90": cell(3.3), "-75": cell(0.0)},
+    "during": {"0": cell(0.9), "60": cell(-1.1)},
     "departure": {"0": cell(-0.8), "30": cell(7.2), "45": cell(4.2), "60": cell(9.7), "75": cell(4.1),
                   "90": cell(-0.2)},
 }}
@@ -33,6 +34,7 @@ def test_bad_stretches_follow_start_and_end():
     assert out["games"] == 1 and out["from"] == "11:00"
     assert out["bad"] == [["14:00", "14:45"], ["18:30", "19:30"]]
     assert len(out["median"]) == 40  # 11:00 to 21:00 in 15-minute slots
+    assert out["median"][20] == 0.9 and out["median"][24] == -1.1  # 16:00 and 17:00, during the game
     assert data["events"][0]["outlook"]["return"] == {"games": 0}
 
 

@@ -40,7 +40,7 @@ def first_day_times(event):
 
 def lookup(curve, anchor, minutes):
     step = int(STEP.total_seconds() // 60)
-    return curve[anchor].get(str(minutes // step * step))
+    return curve.get(anchor, {}).get(str(minutes // step * step))
 
 
 def route_outlook(curve, start, end):
@@ -49,7 +49,9 @@ def route_outlook(curve, start, end):
     times, median, low, high = [], [], [], []
     t = start - BEFORE
     while t < end + AFTER:
-        cells = [c for c in (lookup(curve, "arrival", int((t - start).total_seconds() // 60)) if t < start else None,
+        from_start = int((t - start).total_seconds() // 60)
+        cells = [c for c in (lookup(curve, "arrival", from_start) if t < start else None,
+                             lookup(curve, "during", from_start) if start <= t < end else None,
                              lookup(curve, "departure", int((t - end).total_seconds() // 60)) if t >= end else None)
                  if c]
         cell = max(cells, key=lambda c: c["median"], default=None)

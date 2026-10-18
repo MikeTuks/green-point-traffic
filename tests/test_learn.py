@@ -35,9 +35,13 @@ def test_control_day_median_is_subtracted_per_hour():
     assert "control" not in str(curves)
 
 
-def test_readings_outside_spans_and_unknown_events_are_ignored():
-    curves = learn([
-        reading("2026-10-17T17:00:00+02:00", 1600, 1000, "a", start=45, end=-75),
-        reading("2026-10-17T18:45:00+02:00", 1600, 1000, "zzz", start=150, end=30),
-    ], EVENTS)
+def test_readings_during_the_game_go_to_during_by_minutes_from_start():
+    curves = learn([reading("2026-10-17T17:00:00+02:00", 1060, 1000, "a", start=45, end=-75)], EVENTS)
+    c = curves["sport/medium/outbound"]
+    assert c["during"]["45"]["median"] == 1.0
+    assert c["arrival"] == {} and c["departure"] == {}
+
+
+def test_unknown_events_are_ignored():
+    curves = learn([reading("2026-10-17T18:45:00+02:00", 1600, 1000, "zzz", start=150, end=30)], EVENTS)
     assert curves == {}
