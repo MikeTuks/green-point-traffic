@@ -1687,10 +1687,12 @@
   "crowd_hint": null,
   "closures": [],
   "sources": [
-   "csv"
+   "csv",
+   "dhl_stadium"
   ],
   "source_ids": {
-   "csv": "2027-01-30-stormers-vs-zebre-parma"
+   "csv": "2027-01-30-stormers-vs-zebre-parma",
+   "dhl_stadium": "event-482"
   },
   "status": "confirmed",
   "rescheduled_from": null,
