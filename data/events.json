@@ -1503,6 +1503,28 @@
   "override": true
  },
  {
+  "id": "2026-10-29-caroline-s-white-wine-review",
+  "name": "Caroline's White Wine Review",
+  "start": "2026-10-29T17:00:00+02:00",
+  "end_estimate": "2026-10-29T20:30:54.551000+02:00",
+  "end_date": null,
+  "time_confirmed": true,
+  "time_source": "json",
+  "category": "other",
+  "size": "medium",
+  "crowd_hint": null,
+  "closures": [],
+  "sources": [
+   "dhl_stadium"
+  ],
+  "source_ids": {
+   "dhl_stadium": "event-480"
+  },
+  "status": "confirmed",
+  "rescheduled_from": null,
+  "override": false
+ },
+ {
   "id": "2026-10-31-stormers-vs-ulster",
   "name": "Stormers vs Ulster",
   "start": "2026-10-31T14:45:00+02:00",
