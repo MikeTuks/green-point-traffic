@@ -1,18 +1,18 @@
 {
  "dhl_stadium": {
-  "last_success": "2026-10-23",
+  "last_success": "2026-10-24",
   "events": 78,
   "error": null,
   "failing_since": null
  },
  "sportsdb": {
-  "last_success": "2026-10-23",
+  "last_success": "2026-10-24",
   "events": 2,
   "error": null,
   "failing_since": null
  },
  "capetown_gov": {
-  "last_success": "2026-10-23",
+  "last_success": "2026-10-24",
   "events": 0,
   "error": null,
   "failing_since": null
