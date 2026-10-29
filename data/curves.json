@@ -1,7 +1,69 @@
 {
- "generated": "2026-10-28",
+ "generated": "2026-10-29",
  "control_readings": 52,
  "curves": {
+  "other/medium/outbound": {
+   "events": 1,
+   "arrival": {
+    "-300": {
+     "median": 3.6,
+     "low": 3.6,
+     "high": 3.6,
+     "n": 1
+    },
+    "-285": {
+     "median": -0.0,
+     "low": -0.0,
+     "high": -0.0,
+     "n": 1
+    },
+    "-270": {
+     "median": 0.5,
+     "low": 0.5,
+     "high": 0.5,
+     "n": 1
+    },
+    "-255": {
+     "median": -0.3,
+     "low": -0.3,
+     "high": -0.3,
+     "n": 1
+    }
+   },
+   "during": {},
+   "departure": {}
+  },
+  "other/medium/return": {
+   "events": 1,
+   "arrival": {
+    "-300": {
+     "median": 2.4,
+     "low": 2.4,
+     "high": 2.4,
+     "n": 1
+    },
+    "-285": {
+     "median": -0.1,
+     "low": -0.1,
+     "high": -0.1,
+     "n": 1
+    },
+    "-270": {
+     "median": 0.5,
+     "low": 0.5,
+     "high": 0.5,
+     "n": 1
+    },
+    "-255": {
+     "median": 0.1,
+     "low": 0.1,
+     "high": 0.1,
+     "n": 1
+    }
+   },
+   "during": {},
+   "departure": {}
+  },
   "sport/medium/outbound": {
    "events": 2,
    "arrival": {
