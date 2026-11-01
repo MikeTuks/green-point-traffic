@@ -1537,8 +1537,7 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium",
-   "sportsdb"
+   "dhl_stadium"
   ],
   "source_ids": {
    "csv": "2026-10-31-stormers-vs-ulster",
