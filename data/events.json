@@ -1586,7 +1586,8 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium"
+   "dhl_stadium",
+   "sportsdb"
   ],
   "source_ids": {
    "csv": "2026-12-19-stormers-vs-lions",
