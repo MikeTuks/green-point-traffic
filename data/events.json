@@ -1634,7 +1634,8 @@
   "closures": [],
   "sources": [
    "csv",
-   "dhl_stadium"
+   "dhl_stadium",
+   "sportsdb"
   ],
   "source_ids": {
    "csv": "2027-01-03-stormers-vs-bulls",
